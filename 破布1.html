@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Lighted Rustic American Flag Hanging Banner | Save Up to 62% – Rackicon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --usa-red: #BF0A30;
+            --usa-red-dark: #9E0826;
+            --usa-red-glow: rgba(191, 10, 48, 0.5);
+            --navy: #1E3A5F;
+            --navy-dark: #152a45;
+            --navy-glow: rgba(30, 58, 95, 0.3);
+            --paper: #FFFBF4;
+            --text-dark: #2C2416;
+            --text-medium: #5C4E3D;
+            --text-soft: #8A7A65;
+            --text-muted: #A89880;
+            --border-light: rgba(180, 160, 130, 0.25);
+            --border-card: rgba(180, 160, 130, 0.3);
+            --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.08);
+            --glass-blur: 16px;
+            --radius-xs: 6px;
+            --radius-sm: 12px;
+            --radius-md: 18px;
+            --radius-lg: 24px;
+            --radius-full: 9999px;
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            --font-heading: 'Outfit', 'Inter', sans-serif;
+            --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; font-size:16px; }
+        body {
+            font-family: var(--font-body);
+            background: var(--paper);
+            color: var(--text-dark);
+            min-height:100vh;
+            overflow-x:hidden;
+            position:relative;
+            -webkit-font-smoothing:antialiased;
+            background-image:
+                radial-gradient(ellipse at 25% 8%, rgba(191,10,48,0.04) 0%, transparent 55%),
+                radial-gradient(ellipse at 75% 85%, rgba(30,58,95,0.05) 0%, transparent 55%),
+                radial-gradient(ellipse at 50% 40%, rgba(255,245,225,0.4) 0%, transparent 60%);
+            background-color: #FFFBF4;
+        }
+        #particle-canvas { position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events:none; opacity:0.55; }
+
+        .navbar {
+            position:fixed; top:0; left:0; right:0; z-index:100; padding:12px 24px;
+            display:flex; align-items:center; justify-content:space-between;
+            backdrop-filter:blur(var(--glass-blur)); -webkit-backdrop-filter:blur(var(--glass-blur));
+            background:rgba(255,251,244,0.85); border-bottom:1px solid var(--border-light);
+            transition:all var(--transition-smooth); flex-wrap:wrap; gap:10px;
+        }
+        .navbar .logo { font-family:var(--font-heading); font-weight:800; font-size:1.3rem; color:var(--navy); text-decoration:none; display:flex; align-items:center; gap:6px; }
+        .logo-star { display:inline-block; color:var(--usa-red); font-size:1.3rem; animation:starPulse 2s ease-in-out infinite; }
+        @keyframes starPulse { 0%,100%{transform:scale(1);opacity:1;} 50%{transform:scale(1.3);opacity:0.7;} }
+        .nav-actions { display:flex; align-items:center; gap:8px; }
+        .btn-icon {
+            width:36px; height:36px; border-radius:50%; border:1.5px solid var(--border-light);
+            background:rgba(255,255,255,0.7); color:var(--text-medium); cursor:pointer;
+            display:flex; align-items:center; justify-content:center; font-size:0.9rem;
+            transition:all var(--transition-fast); backdrop-filter:blur(8px);
+        }
+        .btn-icon:hover { background:#fff; border-color:var(--usa-red); color:var(--usa-red); box-shadow:0 4px 12px var(--usa-red-glow); }
+        .nav-shop-btn {
+            background:var(--usa-red); color:#fff; border:none; padding:8px 18px; border-radius:var(--radius-full);
+            font-weight:700; font-size:0.85rem; cursor:pointer; transition:all var(--transition-smooth);
+            box-shadow:0 4px 14px var(--usa-red-glow); text-decoration:none; display:inline-flex; align-items:center; gap:6px;
+            letter-spacing:0.03em; white-space:nowrap;
+        }
+        .nav-shop-btn:hover { transform:translateY(-1px); box-shadow:0 8px 22px rgba(191,10,48,0.5); background:var(--usa-red-dark); }
+
+        .main-content { position:relative; z-index:1; padding-top:80px; max-width:1200px; margin:0 auto; padding-left:16px; padding-right:16px; }
+
+        .hero-section { text-align:center; padding:20px 8px 30px; }
+        .hero-badge { display:inline-block; padding:6px 16px; border-radius:var(--radius-full); background:rgba(191,10,48,0.08); border:1.5px solid rgba(191,10,48,0.25); font-size:0.8rem; font-weight:700; color:var(--usa-red); letter-spacing:0.05em; margin-bottom:16px; animation:fadeInUp 0.8s ease-out; }
+        .hero-title { font-family:var(--font-heading); font-weight:900; font-size:clamp(1.8rem,5vw,3.2rem); letter-spacing:-0.02em; line-height:1.15; margin-bottom:12px; color:var(--text-dark); animation:fadeInUp 0.8s ease-out 0.1s both; }
+        .hero-title .highlight-red { color:var(--usa-red); }
+        .hero-title .highlight-navy { color:var(--navy); }
+        .hero-subtitle { font-size:0.95rem; color:var(--text-medium); max-width:560px; margin:0 auto 18px; line-height:1.6; animation:fadeInUp 0.8s ease-out 0.2s both; }
+
+        .carousel-wrapper { max-width:420px; margin:0 auto 20px; position:relative; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-md); background:#fff; padding:6px; animation:fadeInUp 0.8s ease-out 0.22s both; }
+        .carousel-inner { position:relative; width:100%; height:0; padding-top:100%; border-radius:var(--radius-sm); overflow:hidden; background:#f5f0e6; }
+        .carousel-slides-container { position:absolute; top:0; left:0; width:100%; height:100%; }
+        .carousel-slide { position:absolute; top:0; left:0; width:100%; height:100%; opacity:0; transition:opacity 0.5s ease-in-out; pointer-events:none; display:flex; align-items:center; justify-content:center; }
+        .carousel-slide.active { opacity:1; pointer-events:auto; }
+        .carousel-slide img { width:100%; height:100%; object-fit:cover; display:block; border-radius:var(--radius-xs); }
+        .carousel-fallback { width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:linear-gradient(135deg,#f8f0e0,#f0e5d0); border-radius:var(--radius-xs); color:var(--text-muted); font-size:0.8rem; text-align:center; flex-direction:column; gap:4px; border:2px dashed #d5c8b0; }
+        .carousel-arrow { position:absolute; top:50%; transform:translateY(-50%); z-index:10; width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,0.9); border:1px solid var(--border-light); color:var(--text-medium); cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:0.9rem; transition:all var(--transition-fast); box-shadow:0 2px 6px rgba(0,0,0,0.06); opacity:0.85; }
+        .carousel-arrow:hover { background:#fff; border-color:var(--usa-red); color:var(--usa-red); opacity:1; box-shadow:0 3px 10px var(--usa-red-glow); }
+        .carousel-arrow.prev { left:12px; } .carousel-arrow.next { right:12px; }
+        .carousel-dots { position:absolute; bottom:14px; left:50%; transform:translateX(-50%); display:flex; gap:6px; z-index:10; }
+        .carousel-dot { width:8px; height:8px; border-radius:50%; background:rgba(0,0,0,0.2); border:2px solid rgba(0,0,0,0.25); cursor:pointer; transition:all var(--transition-fast); }
+        .carousel-dot.active { background:var(--usa-red); border-color:var(--usa-red); box-shadow:0 0 6px var(--usa-red-glow); transform:scale(1.2); }
+
+        .price-block { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; margin-bottom:18px; animation:fadeInUp 0.8s ease-out 0.25s both; min-height:60px; }
+        .hero-price-strikethrough { font-family:var(--font-heading); font-size:2.4rem; font-weight:900; color:var(--text-muted); text-decoration:line-through; text-decoration-color:var(--usa-red); text-decoration-thickness:3px; }
+        .hero-price-hint { font-size:0.9rem; color:var(--text-soft); font-weight:500; letter-spacing:0.02em; margin-top:2px; }
+
+        .hero-cta {
+            display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:14px 28px; border-radius:var(--radius-full);
+            background:var(--usa-red); color:#fff; font-weight:800; font-size:1.05rem; border:none; cursor:pointer;
+            text-decoration:none; letter-spacing:0.03em; box-shadow:0 8px 24px var(--usa-red-glow);
+            transition:all var(--transition-smooth); animation:fadeInUp 0.8s ease-out 0.3s both, pulseCta 2.5s ease-in-out infinite;
+            position:relative; overflow:hidden; white-space:nowrap;
+        }
+        .hero-cta:hover { transform:translateY(-3px); box-shadow:0 14px 36px rgba(191,10,48,0.6); background:var(--usa-red-dark); }
+        @keyframes pulseCta {
+            0%, 100% { transform: scale(1); box-shadow: 0 8px 24px var(--usa-red-glow); }
+            50% { transform: scale(1.03); box-shadow: 0 14px 36px rgba(191,10,48,0.55); }
+        }
+        .cta-shine { position:absolute; top:0; left:-100%; width:50%; height:100%; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent); animation:shine 2.5s ease-in-out infinite; }
+        @keyframes shine { 0%{left:-100%;} 40%,100%{left:200%;} }
+        @keyframes fadeInUp { from{opacity:0;transform:translateY(20px);} to{opacity:1;transform:translateY(0);} }
+
+        .section-label { text-align:center; font-family:var(--font-heading); font-weight:700; font-size:1.2rem; letter-spacing:0.02em; margin-bottom:4px; color:var(--text-dark); }
+        .section-sub-label { text-align:center; font-size:0.8rem; color:var(--text-soft); margin-bottom:18px; }
+        .product-cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:18px; padding:0 0 30px; }
+        .product-card { animation:fadeInUp 0.8s ease-out both; }
+        .product-card:nth-child(1){animation-delay:0.35s;} .product-card:nth-child(2){animation-delay:0.45s;} .product-card:nth-child(3){animation-delay:0.55s;}
+        .card-inner {
+            background:rgba(255,255,255,0.75); border:1.5px solid var(--border-card); border-radius:var(--radius-lg);
+            padding:24px 16px 18px; backdrop-filter:blur(var(--glass-blur)); -webkit-backdrop-filter:blur(var(--glass-blur));
+            transition:all var(--transition-smooth); text-align:center;
+            box-shadow:var(--shadow-sm); min-height:200px; display:flex; flex-direction:column; align-items:center;
+            position:relative; overflow:hidden;
+        }
+        .card-inner:hover { box-shadow:var(--shadow-md),0 0 30px var(--usa-red-glow); border-color:rgba(191,10,48,0.4); transform:translateY(-3px); }
+        .card-stripe { position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, var(--usa-red), white, var(--navy), white, var(--usa-red)); background-size:200% 100%; animation:stripeFlow 3s linear infinite; opacity:0; transition:opacity var(--transition-smooth); }
+        .card-inner:hover .card-stripe { opacity:1; }
+        @keyframes stripeFlow { 0%{background-position:200% 0;} 100%{background-position:-200% 0;} }
+        .card-icon { font-size:2.4rem; margin-bottom:8px; }
+        .card-title { font-family:var(--font-heading); font-weight:700; font-size:1.05rem; margin-bottom:4px; color:var(--text-dark); }
+        .card-desc { font-size:0.85rem; color:var(--text-soft); line-height:1.5; flex:1; }
+        .card-price { font-family:var(--font-heading); font-weight:800; color:var(--text-medium); font-size:1.2rem; margin-top:8px; text-decoration:line-through; text-decoration-color:var(--usa-red); text-decoration-thickness:2px; }
+        .card-hint { font-size:0.8rem; color:var(--usa-red); font-weight:600; margin-top:4px; letter-spacing:0.02em; }
+
+        .details-section { background:rgba(255,255,255,0.7); border:1.5px solid var(--border-card); border-radius:var(--radius-lg); padding:24px 20px; margin:10px 0 25px; backdrop-filter:blur(var(--glass-blur)); box-shadow:0 1px 4px rgba(0,0,0,0.04); animation:fadeInUp 0.8s ease-out 0.4s both; }
+        .details-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:14px; margin-top:12px; }
+        .detail-item { display:flex; align-items:flex-start; gap:8px; font-size:0.9rem; color:var(--text-medium); }
+        .detail-item i { color:var(--navy); font-size:1.1rem; margin-top:1px; }
+
+        .game-section {
+            background:rgba(255,255,255,0.7); border:2px solid var(--border-card); border-radius:var(--radius-lg);
+            padding:24px 16px 20px; backdrop-filter:blur(var(--glass-blur)); text-align:center;
+            box-shadow:var(--shadow-sm); margin:0 0 25px; animation:fadeInUp 0.8s ease-out 0.35s both; position:relative; overflow:hidden;
+        }
+        .game-section::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:conic-gradient(from 0deg, transparent, rgba(191,10,48,0.04), transparent, rgba(30,58,95,0.04), transparent, rgba(191,10,48,0.04), transparent); animation:rotateGlow 20s linear infinite; pointer-events:none; }
+        .game-section>* { position:relative; z-index:1; }
+        .game-title { font-family:var(--font-heading); font-weight:800; font-size:1.3rem; margin-bottom:2px; color:var(--text-dark); }
+        .game-desc { color:var(--text-soft); font-size:0.85rem; margin-bottom:10px; }
+        .game-area { position:relative; width:100%; max-width:500px; height:220px; margin:0 auto 12px; background:linear-gradient(180deg, rgba(30,58,95,0.05) 0%, rgba(191,10,48,0.03) 40%, rgba(255,245,225,0.25) 100%); border-radius:var(--radius-md); border:2px dashed rgba(180,160,130,0.4); cursor:pointer; overflow:hidden; touch-action:manipulation; user-select:none; }
+        .star-target { position:absolute; font-size:1.6rem; cursor:pointer; transition:transform 0.15s; z-index:2; animation:starFloat 3s ease-in-out infinite; filter:drop-shadow(0 0 6px rgba(191,10,48,0.5)); }
+        @keyframes starFloat { 0%,100%{transform:translateY(0) scale(1);} 30%{transform:translateY(-10px) scale(1.1);} 60%{transform:translateY(-3px) scale(1.03);} }
+        .star-collected-effect { position:absolute; pointer-events:none; z-index:10; font-size:1.8rem; animation:starCollectPop 0.6s ease-out forwards; }
+        @keyframes starCollectPop { 0%{transform:scale(0.6);opacity:1;} 100%{transform:scale(2) translateY(-30px);opacity:0;} }
+        .progress-row { display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; margin-bottom:6px; }
+        .progress-bar-outer { width:100%; max-width:300px; height:10px; background:#e8e0d5; border-radius:8px; overflow:hidden; }
+        .progress-bar-inner { height:100%; background:linear-gradient(90deg, var(--usa-red), white, var(--navy)); background-size:200% 100%; animation:progressShine 2s linear infinite; width:0%; transition:width var(--transition-bounce); border-radius:8px; }
+        @keyframes progressShine { 0%{background-position:200% 0;} 100%{background-position:-200% 0;} }
+        .btn-game {
+            background:var(--usa-red); color:#fff; border:none; padding:11px 24px; border-radius:var(--radius-full);
+            font-weight:700; cursor:pointer; transition:all var(--transition-smooth); font-size:0.9rem;
+            box-shadow:0 4px 16px var(--usa-red-glow); display:inline-flex; align-items:center; gap:6px; letter-spacing:0.03em;
+            margin:4px; white-space:nowrap;
+        }
+        .btn-game:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(191,10,48,0.5); background:var(--usa-red-dark); }
+        .game-reward {
+            background:linear-gradient(135deg, #fffdf5, #fff8e5); border:2px solid var(--usa-red); padding:20px 16px;
+            border-radius:var(--radius-md); margin-top:16px; display:none; animation:rewardPop 0.5s cubic-bezier(0.34,1.56,0.64,1);
+            position:relative; z-index:1; color:var(--text-dark);
+        }
+        .game-reward.show { display:block; }
+        @keyframes rewardPop { 0%{transform:scale(0.7);opacity:0;} 100%{transform:scale(1);opacity:1;} }
+        .reward-star { font-size:2rem; display:block; margin-bottom:4px; }
+        .reward-price { font-family:var(--font-heading); font-size:2rem; font-weight:900; color:var(--usa-red); text-shadow:0 2px 10px var(--usa-red-glow); }
+        .reward-timer { background:var(--usa-red); color:#fff; padding:7px 16px; border-radius:var(--radius-full); font-size:0.9rem; font-weight:800; letter-spacing:0.04em; display:inline-block; margin:6px 0; }
+        .shop-now-reward {
+            display:inline-block; background:var(--usa-red); color:#fff; padding:14px 32px; border-radius:var(--radius-full);
+            font-weight:800; font-size:1.1rem; text-decoration:none; transition:all var(--transition-smooth);
+            box-shadow:0 10px 28px var(--usa-red-glow); margin-top:12px; letter-spacing:0.04em; animation:pulseBtn 2s ease-in-out infinite;
+        }
+        @keyframes pulseBtn { 0%,100%{box-shadow:0 10px 28px var(--usa-red-glow);} 50%{box-shadow:0 16px 40px rgba(191,10,48,0.6);transform:scale(1.02);} }
+        .shop-now-reward:hover { transform:translateY(-3px); background:var(--usa-red-dark); box-shadow:0 18px 42px rgba(191,10,48,0.65); }
+
+        .bottom-cta { text-align:center; padding:10px 0 40px; animation:fadeInUp 0.8s ease-out 0.6s both; }
+        .shop-now-bottom {
+            display:inline-block; background:var(--usa-red); color:#fff; padding:16px 40px; border-radius:var(--radius-full);
+            font-weight:900; font-size:1.2rem; text-decoration:none; transition:all var(--transition-smooth);
+            box-shadow:0 12px 34px var(--usa-red-glow); letter-spacing:0.04em; animation:pulseBtn 2s ease-in-out infinite;
+            position:relative; overflow:hidden; white-space:nowrap;
+        }
+        .shop-now-bottom .cta-shine { position:absolute; top:0; left:-100%; width:50%; height:100%; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent); animation:shine 2.5s ease-in-out infinite; }
+        .shop-now-bottom:hover { transform:translateY(-4px); box-shadow:0 18px 48px rgba(191,10,48,0.6); background:var(--usa-red-dark); }
+
+        .floating-shop { position:fixed; bottom:20px; right:20px; z-index:110; background:var(--usa-red); color:#fff; width:48px; height:48px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.3rem; box-shadow:0 6px 20px var(--usa-red-glow); cursor:pointer; transition:all var(--transition-smooth); text-decoration:none; animation:floatBtn 3s ease-in-out infinite; }
+        @keyframes floatBtn { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-8px);} }
+        .floating-shop:hover { transform:scale(1.1); background:var(--usa-red-dark); }
+
+        .toast { position:fixed; bottom:80px; left:50%; transform:translateX(-50%) translateY(100px); background:rgba(40,35,25,0.95); color:#fff; padding:10px 22px; border-radius:var(--radius-full); font-size:0.85rem; font-weight:600; z-index:200; pointer-events:none; opacity:0; transition:all var(--transition-bounce); white-space:nowrap; }
+        .toast.show { transform:translateX(-50%) translateY(0); opacity:1; }
+
+        .footer { text-align:center; padding:24px 16px; color:var(--text-muted); font-size:0.75rem; border-top:1px solid var(--border-light); max-width:1200px; margin:0 auto; }
+
+        @media (max-width:768px) {
+            .navbar { padding:10px 14px; }
+            .hero-title { font-size:1.7rem; }
+            .carousel-wrapper { max-width:340px; }
+            .game-area { height:200px; }
+            .hero-cta { font-size:0.9rem; padding:12px 20px; gap:6px; }
+            .hero-cta .price-badge { font-size:1.1em; }
+            .btn-game { font-size:0.85rem; padding:10px 20px; }
+            .shop-now-bottom { font-size:1.1rem; padding:14px 34px; }
+            .floating-shop { width:44px; height:44px; font-size:1.2rem; bottom:16px; right:16px; }
+            .hero-price-strikethrough { font-size:2rem; }
+            .card-price { font-size:1.1rem; }
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="toast" id="toast"></div>
+
+    <nav class="navbar">
+        <a href="#" class="logo"><span class="logo-star">★</span> Rackicon</a>
+        <div class="nav-actions">
+            <button class="btn-icon" id="btnSound" title="Toggle Sound"><i class="fa-solid fa-volume-high" id="iconSound"></i></button>
+            <a href="https://rackicon.com/preview/products/lighted-rustic-american-flag-hanging-banner?preview=1&themeId=69f322359ca5fcfc16bdf5f1" target="_blank" class="nav-shop-btn"><i class="fa-solid fa-bag-shopping"></i> Shop Now</a>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-badge">★ No.1 Patriotic Decor</div>
+            <h1 class="hero-title">
+                Light Up Your <span class="highlight-red">American Pride</span><br>
+                With the <span class="highlight-navy">Lighted Rustic Flag</span>
+            </h1>
+            <p class="hero-subtitle">
+                Stunning 4 x 2.3 Ft vintage-style American flag with warm LED illumination. Weather-resistant rag fabric, perfect for Independence Day, Memorial Day, or everyday display.
+            </p>
+
+            <div class="carousel-wrapper" id="carouselWrapper">
+                <div class="carousel-inner">
+                    <div class="carousel-slides-container" id="carouselInner">
+                        <div class="carousel-slide active" data-index="0"><img src="https://img-va.myshopline.com/image/store/1777539793048/4-363_1254x.png?h=1254&q=80&w=1254" alt="Flag 1" onerror="this.parentNode.innerHTML='<div class=\'carousel-fallback\'><span>📸</span> Image 1</div>';"></div>
+                        <div class="carousel-slide" data-index="1"><img src="https://img-va.myshopline.com/image/store/1777539793048/1-362_1254x.png?h=1254&q=80&w=1254" alt="Flag 2" onerror="this.parentNode.innerHTML='<div class=\'carousel-fallback\'><span>📸</span> Image 2</div>';"></div>
+                        <div class="carousel-slide" data-index="2"><img src="https://img-va.myshopline.com/image/store/1777539793048/10-193_1254x.png?h=1254&q=80&w=1254" alt="Flag 3" onerror="this.parentNode.innerHTML='<div class=\'carousel-fallback\'><span>📸</span> Image 3</div>';"></div>
+                        <div class="carousel-slide" data-index="3"><img src="https://img-va.myshopline.com/image/store/1777539793048/7-298_1254x.png?h=1254&q=80&w=1254" alt="Flag 4" onerror="this.parentNode.innerHTML='<div class=\'carousel-fallback\'><span>📸</span> Image 4</div>';"></div>
+                    </div>
+                </div>
+                <button class="carousel-arrow prev" id="carouselPrev"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-arrow next" id="carouselNext"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="carousel-dots" id="carouselDots">
+                    <span class="carousel-dot active" data-index="0"></span><span class="carousel-dot" data-index="1"></span><span class="carousel-dot" data-index="2"></span><span class="carousel-dot" data-index="3"></span>
+                </div>
+            </div>
+
+            <div class="price-block" id="heroPriceBlock">
+                <span class="hero-price-strikethrough">$99.99</span>
+                <span class="hero-price-hint">Why pay full price? Grab the deal below.</span>
+            </div>
+            <a href="https://rackicon.com/preview/products/lighted-rustic-american-flag-hanging-banner?preview=1&themeId=69f322359ca5fcfc16bdf5f1" target="_blank" class="hero-cta" id="heroCtaBtn">
+                <span class="cta-shine"></span>
+                <i class="fa-solid fa-bolt"></i> Click Now at <span class="price-badge" style="background:#fff; color:var(--usa-red); border-radius:50px; padding:4px 12px; font-weight:900; font-size:1.15em; margin:0 4px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">$39.99</span>
+            </a>
+        </section>
+
+        <section class="game-section" id="gameSection">
+            <h2 class="game-title">⭐ Unlock an Even Better Price</h2>
+            <p class="game-desc">Tap the stars or use the button below to get <strong>62% OFF</strong> – only <strong>$39.99</strong>!</p>
+            <div class="game-area" id="gameArea"></div>
+            <div class="progress-row">
+                <div class="progress-bar-outer"><div class="progress-bar-inner" id="progressBarInner" style="width:0%"></div></div>
+                <span class="progress-text"><span id="starCountDisplay">0</span> / 15 ★</span>
+            </div>
+            <button class="btn-game" id="btnInstantUnlock">
+                <i class="fa-solid fa-star"></i> Collect 15 Stars for 62% OFF
+            </button>
+            <button class="btn-game" id="btnResetGame" style="background:var(--navy);"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+            <div class="game-reward" id="gameReward">
+                <span class="reward-star">🎉🇺🇸🎉</span>
+                <strong style="font-size:1.3rem;">Congratulations, Patriot!</strong>
+                <p style="margin:6px 0; color:var(--text-medium);">Your special price is ready:</p>
+                <span class="reward-price">$39.99</span>
+                <p style="font-size:0.85rem; color:var(--text-soft);">(Regular $99.99 – you save $60.00!)</p>
+                <div class="reward-timer" id="rewardCountdown">⏳ 25:00 remaining</div>
+                <p style="font-weight:600; color:var(--usa-red); margin-top:6px;">Click below – discount auto-applied.</p>
+                <a href="https://rackicon.com/preview/products/lighted-rustic-american-flag-hanging-banner?preview=1&themeId=69f322359ca5fcfc16bdf5f1" target="_blank" class="shop-now-reward">
+                    <i class="fa-solid fa-cart-shopping"></i> Shop Now at $39.99
+                </a>
+            </div>
+        </section>
+
+        <div class="details-section">
+            <div class="section-label">Product Details</div>
+            <div class="details-grid">
+                <div class="detail-item"><i class="fa-solid fa-ruler"></i> <span><strong>Size:</strong> 4 x 2.3 ft – Fits porches, fences & garages.</span></div>
+                <div class="detail-item"><i class="fa-solid fa-lightbulb"></i> <span><strong>LED Glow:</strong> Warm white lights shine brightly at night.</span></div>
+                <div class="detail-item"><i class="fa-solid fa-cloud-rain"></i> <span><strong>Weatherproof:</strong> Durable rag fabric resists sun, rain & wind.</span></div>
+                <div class="detail-item"><i class="fa-solid fa-grommet"></i> <span><strong>Easy Setup:</strong> Metal grommets for quick hanging.</span></div>
+                <div class="detail-item"><i class="fa-solid fa-flag-usa"></i> <span><strong>Vintage Look:</strong> Distressed stars & stripes with rustic charm.</span></div>
+                <div class="detail-item"><i class="fa-solid fa-plug"></i> <span><strong>Power:</strong> Battery or USB plug-in options (sold separately).</span></div>
+            </div>
+        </div>
+
+        <div class="section-label">Why Americans Love This Flag</div>
+        <div class="section-sub-label">Premium quality that makes every home proud</div>
+        <section class="product-cards">
+            <div class="product-card"><div class="card-inner"><div class="card-stripe"></div><span class="card-icon">💡</span><h3 class="card-title">Built-In LED Glow</h3><p class="card-desc">Stars and stripes shine brilliantly after dark.</p><span class="card-price">$99.99</span><span class="card-hint">Don't miss this bright deal!</span></div></div>
+            <div class="product-card"><div class="card-inner"><div class="card-stripe"></div><span class="card-icon">🏡</span><h3 class="card-title">All-Weather Tough</h3><p class="card-desc">Rugged fabric stands up to sun, rain, and wind.</p><span class="card-price">$99.99</span><span class="card-hint">Your wallet will thank you.</span></div></div>
+            <div class="product-card"><div class="card-inner"><div class="card-stripe"></div><span class="card-icon">🎆</span><h3 class="card-title">Statement Size</h3><p class="card-desc">4 x 2.3 ft – bold presence on any porch or backdrop.</p><span class="card-price">$99.99</span><span class="card-hint">This deal won't last long!</span></div></div>
+        </section>
+
+        <div class="bottom-cta">
+            <a href="https://rackicon.com/preview/products/lighted-rustic-american-flag-hanging-banner?preview=1&themeId=69f322359ca5fcfc16bdf5f1" target="_blank" class="shop-now-bottom" id="bottomShopBtn">
+                <span class="cta-shine"></span>
+                <span id="bottomBtnText"><i class="fa-solid fa-cart-shopping"></i> Shop Now</span>
+            </a>
+            <p style="margin-top:8px;color:var(--text-muted);font-size:0.8rem;">⭐ Free Shipping on Orders Over $50</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 <strong style="color:var(--usa-red);">Rackicon</strong> · Lighted Rustic American Flag Hanging Banner · Patriotic Decor</p>
+    </footer>
+
+    <a href="https://rackicon.com/preview/products/lighted-rustic-american-flag-hanging-banner?preview=1&themeId=69f322359ca5fcfc16bdf5f1" target="_blank" class="floating-shop" title="Shop Now">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </a>
+
+    <script>
+        (function() {
+            const canvas = document.getElementById('particle-canvas');
+            const ctx = canvas.getContext('2d');
+            const rewardCountdownEl = document.getElementById('rewardCountdown');
+            const gameArea = document.getElementById('gameArea');
+            const progressBarInner = document.getElementById('progressBarInner');
+            const starCountDisplay = document.getElementById('starCountDisplay');
+            const btnInstantUnlock = document.getElementById('btnInstantUnlock');
+            const btnResetGame = document.getElementById('btnResetGame');
+            const gameReward = document.getElementById('gameReward');
+            const btnSound = document.getElementById('btnSound');
+            const iconSound = document.getElementById('iconSound');
+            const toast = document.getElementById('toast');
+
+            const carouselWrapper = document.getElementById('carouselWrapper');
+            const carouselInner = document.getElementById('carouselInner');
+            const carouselPrev = document.getElementById('carouselPrev');
+            const carouselNext = document.getElementById('carouselNext');
+            const carouselDots = document.getElementById('carouselDots');
+            const allSlides = carouselInner.querySelectorAll('.carousel-slide');
+            const allDots = carouselDots.querySelectorAll('.carousel-dot');
+            const totalSlides = allSlides.length;
+            let currentSlide = 0;
+            let carouselInterval;
+            const carouselDelay = 3500;
+
+            let starsCollected = 0;
+            const targetStars = 15;
+            let rewardUnlocked = false;
+            let soundEnabled = true;
+            let mouseX = window.innerWidth/2, mouseY = window.innerHeight/2;
+            let targetMouseX = mouseX, targetMouseY = mouseY;
+            let particles = [], animationId;
+            const isMobile = window.innerWidth <= 768;
+            let particleCount = isMobile ? 40 : 65;
+            let starTargets = [], starAnimationId;
+            const activeStarCount = 18;
+
+            let countdownActive = false;
+            let countdownEnd = null;
+            let countdownInterval = null;
+
+            function updateRewardCountdown() {
+                if (!countdownActive || !countdownEnd) return;
+                const now = Date.now();
+                const dist = countdownEnd - now;
+                if (dist <= 0) { rewardCountdownEl.textContent = '⏳ 00:00 expired'; clearInterval(countdownInterval); countdownActive = false; return; }
+                const m = Math.floor(dist / (1000 * 60));
+                const s = Math.floor((dist % (1000 * 60)) / 1000);
+                rewardCountdownEl.textContent = `⏳ ${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')} remaining`;
+            }
+            function startCountdown() { countdownEnd = new Date().getTime() + 25 * 60 * 1000; countdownActive = true; if(countdownInterval)clearInterval(countdownInterval); updateRewardCountdown(); countdownInterval = setInterval(updateRewardCountdown, 1000); }
+
+            function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; if((window.innerWidth<=768)!==isMobile){ particleCount=window.innerWidth<=768?40:65; initParticles(); } }
+            function initParticles() {
+                particles=[];
+                const cols=['rgba(191,10,48,0.35)','rgba(30,58,95,0.35)','rgba(255,240,210,0.45)','rgba(191,10,48,0.2)','rgba(30,58,95,0.2)'];
+                for(let i=0;i<particleCount;i++) particles.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-0.5)*0.35,vy:(Math.random()-0.5)*0.35,radius:Math.random()*2+0.6,baseRadius:Math.random()*2+0.6,color:cols[Math.floor(Math.random()*cols.length)],phase:Math.random()*Math.PI*2,twinkle:Math.random()*0.015+0.005});
+            }
+            function drawParticles() {
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+                for(let p of particles){ p.x+=p.vx; p.y+=p.vy; if(p.x<-20)p.x=canvas.width+20; if(p.x>canvas.width+20)p.x=-20; if(p.y<-20)p.y=canvas.height+20; if(p.y>canvas.height+20)p.y=-20; p.radius=p.baseRadius+Math.sin(Date.now()*p.twinkle+p.phase)*0.6; ctx.beginPath(); ctx.arc(p.x,p.y,p.radius,0,Math.PI*2); ctx.fillStyle=p.color; ctx.fill(); ctx.beginPath(); ctx.arc(p.x,p.y,p.radius*1.8,0,Math.PI*2); ctx.fillStyle=p.color.replace('0.35','0.08').replace('0.45','0.1').replace('0.2','0.05'); ctx.fill(); const dist=Math.hypot(p.x-mouseX,p.y-mouseY); if(dist<140){ ctx.beginPath(); ctx.arc(p.x,p.y,p.radius*2.8,0,Math.PI*2); ctx.fillStyle=p.color.replace('0.35','0.13').replace('0.45','0.15').replace('0.2','0.08'); ctx.fill(); } }
+                for(let i=0;i<particles.length;i++){ for(let j=i+1;j<particles.length;j++){ const dist=Math.hypot(particles[i].x-particles[j].x,particles[i].y-particles[j].y); if(dist<110){ const alpha=(1-dist/110)*0.09; ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.strokeStyle=`rgba(180,150,110,${alpha})`; ctx.lineWidth=0.5; ctx.stroke(); } } }
+            }
+            function animateParticles() { drawParticles(); animationId=requestAnimationFrame(animateParticles); }
+
+            document.addEventListener('mousemove',e=>{ targetMouseX=e.clientX; targetMouseY=e.clientY; });
+            document.addEventListener('touchmove',e=>{ if(e.touches.length>0){ targetMouseX=e.touches[0].clientX; targetMouseY=e.touches[0].clientY; } },{passive:true});
+            function smoothMouse(){ mouseX+=(targetMouseX-mouseX)*0.06; mouseY+=(targetMouseY-mouseY)*0.06; requestAnimationFrame(smoothMouse); }
+
+            function goToSlide(index){ if(index===currentSlide)return; allSlides.forEach(s=>s.classList.remove('active')); allDots.forEach(d=>d.classList.remove('active')); currentSlide=index; allSlides[currentSlide].classList.add('active'); allDots[currentSlide].classList.add('active'); }
+            function nextSlide(){ goToSlide((currentSlide+1)%totalSlides); }
+            function prevSlide(){ goToSlide((currentSlide-1+totalSlides)%totalSlides); }
+            function resetCarouselInterval(){ clearInterval(carouselInterval); carouselInterval=setInterval(nextSlide,carouselDelay); }
+            carouselPrev.addEventListener('click',()=>{ prevSlide(); resetCarouselInterval(); });
+            carouselNext.addEventListener('click',()=>{ nextSlide(); resetCarouselInterval(); });
+            allDots.forEach(dot=>{ dot.addEventListener('click',()=>{ goToSlide(parseInt(dot.dataset.index)); resetCarouselInterval(); }); });
+            let touchStartX=0,touchEndX=0;
+            carouselWrapper.addEventListener('touchstart',e=>{ touchStartX=e.touches[0].clientX; },{passive:true});
+            carouselWrapper.addEventListener('touchend',e=>{ touchEndX=e.changedTouches[0].clientX; if(Math.abs(touchStartX-touchEndX)>40){ touchStartX>touchEndX?nextSlide():prevSlide(); resetCarouselInterval(); } });
+            carouselInterval=setInterval(nextSlide,carouselDelay);
+
+            function createStarTargets(){ starTargets=[]; const rect=gameArea.getBoundingClientRect(); const w=rect.width,h=rect.height,pad=20; for(let i=0;i<activeStarCount;i++) starTargets.push({x:pad+Math.random()*(w-pad*2),y:pad+Math.random()*(h-pad*2),vx:(Math.random()-0.5)*0.5,vy:(Math.random()-0.5)*0.5,emoji:['⭐','🌟','✨','★'][Math.floor(Math.random()*4)],size:1.2+Math.random()*1.2,collected:false,delay:Math.random()*1200}); renderStars(); }
+            function renderStars(){ gameArea.querySelectorAll('.star-target,.star-collected-effect').forEach(e=>e.remove()); const rect=gameArea.getBoundingClientRect(); const w=rect.width,h=rect.height,pad=20; starTargets.forEach((s,i)=>{ if(s.collected)return; s.x=Math.max(pad,Math.min(w-pad,s.x)); s.y=Math.max(pad,Math.min(h-pad,s.y)); const el=document.createElement('span'); el.className='star-target'; el.textContent=s.emoji; el.style.left=s.x+'px'; el.style.top=s.y+'px'; el.style.fontSize=s.size+'rem'; el.style.animationDelay=s.delay+'ms'; el.addEventListener('click',(e)=>collectStar(i,e)); el.addEventListener('touchend',(e)=>{ e.preventDefault(); collectStar(i,e); }); gameArea.appendChild(el); s.el=el; }); }
+            function collectStar(index,e){ if(starTargets[index].collected||starsCollected>=targetStars||rewardUnlocked)return; starTargets[index].collected=true; if(starTargets[index].el)starTargets[index].el.remove(); const eff=document.createElement('span'); eff.className='star-collected-effect'; eff.textContent='⭐'; const rect=gameArea.getBoundingClientRect(); eff.style.left=(e.clientX-rect.left)+'px'; eff.style.top=(e.clientY-rect.top)+'px'; gameArea.appendChild(eff); eff.addEventListener('animationend',()=>eff.remove()); starsCollected++; updateGameUI(); playSound(800); if(starsCollected<targetStars)setTimeout(()=>respawnStar(index),500+Math.random()*700); }
+            function respawnStar(index){ const rect=gameArea.getBoundingClientRect(); const w=rect.width,h=rect.height,pad=20; starTargets[index]={x:pad+Math.random()*(w-pad*2),y:pad+Math.random()*(h-pad*2),vx:(Math.random()-0.5)*0.5,vy:(Math.random()-0.5)*0.5,emoji:['⭐','🌟','✨','★'][Math.floor(Math.random()*4)],size:1.2+Math.random()*1.2,collected:false,delay:Math.random()*1200}; renderStars(); }
+            function animateStars(){ const rect=gameArea.getBoundingClientRect(); const w=rect.width,h=rect.height,pad=20; starTargets.forEach(s=>{ if(s.collected)return; s.x+=s.vx; s.y+=s.vy; if(s.x<=pad||s.x>=w-pad)s.vx*=-1; if(s.y<=pad||s.y>=h-pad)s.vy*=-1; s.x=Math.max(pad,Math.min(w-pad,s.x)); s.y=Math.max(pad,Math.min(h-pad,s.y)); if(s.el){s.el.style.left=s.x+'px'; s.el.style.top=s.y+'px';} }); if(!rewardUnlocked) starAnimationId=requestAnimationFrame(animateStars); }
+
+            function unlockReward() {
+                if(rewardUnlocked) return;
+                rewardUnlocked = true;
+                gameReward.classList.add('show');
+                startCountdown();
+                showToast('🎉 Unlocked! Your 62% discount is active!');
+                playRewardSound();
+                if(starAnimationId){ cancelAnimationFrame(starAnimationId); starAnimationId = null; }
+                gameArea.querySelectorAll('.star-target').forEach(e => e.remove());
+                starTargets.forEach(s => { s.collected = true; s.el = null; });
+            }
+
+            function updateGameUI(){
+                starCountDisplay.textContent = starsCollected;
+                progressBarInner.style.width = Math.min((starsCollected/targetStars)*100,100)+'%';
+                if(starsCollected >= targetStars && !rewardUnlocked) unlockReward();
+            }
+
+            function resetGame(){
+                if(starAnimationId){ cancelAnimationFrame(starAnimationId); starAnimationId = null; }
+                starsCollected = 0;
+                rewardUnlocked = false;
+                gameReward.classList.remove('show');
+                if(countdownInterval){ clearInterval(countdownInterval); countdownInterval = null; }
+                countdownActive = false;
+                updateGameUI();
+                gameArea.querySelectorAll('.star-target,.star-collected-effect').forEach(e => e.remove());
+                createStarTargets();
+                starAnimationId = requestAnimationFrame(animateStars);
+                showToast('🔄 Reset! Tap stars or click to unlock 62% off.');
+            }
+
+            btnInstantUnlock.addEventListener('click', () => {
+                if(rewardUnlocked) return;
+                starsCollected = targetStars;
+                updateGameUI();
+                unlockReward();
+            });
+
+            btnResetGame.addEventListener('click', resetGame);
+
+            function initGame(){ createStarTargets(); updateGameUI(); starAnimationId = requestAnimationFrame(animateStars); }
+
+            let audioCtx; function getCtx(){ if(!audioCtx) audioCtx = new(window.AudioContext||window.webkitAudioContext)(); return audioCtx; }
+            function playSound(freq){ if(!soundEnabled)return; try{ const ctx=getCtx(); const o=ctx.createOscillator(); const g=ctx.createGain(); o.connect(g); g.connect(ctx.destination); o.type='sine'; o.frequency.setValueAtTime(freq,ctx.currentTime); o.frequency.exponentialRampToValueAtTime(freq*1.3,ctx.currentTime+0.05); g.gain.setValueAtTime(0.05,ctx.currentTime); g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.1); o.start(); o.stop(ctx.currentTime+0.1); }catch(e){} }
+            function playRewardSound(){ if(!soundEnabled)return; try{ const ctx=getCtx(); [523,659,784,1047].forEach((f,i)=>{ const o=ctx.createOscillator(); const g=ctx.createGain(); o.connect(g); g.connect(ctx.destination); o.type='triangle'; o.frequency.setValueAtTime(f,ctx.currentTime+i*0.08); g.gain.setValueAtTime(0.07,ctx.currentTime+i*0.08); g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+i*0.08+0.14); o.start(ctx.currentTime+i*0.08); o.stop(ctx.currentTime+i*0.08+0.14); }); }catch(e){} }
+            btnSound.addEventListener('click',()=>{ soundEnabled=!soundEnabled; iconSound.className=soundEnabled?'fa-solid fa-volume-high':'fa-solid fa-volume-xmark'; showToast(soundEnabled?'🔊 Sound ON':'🔇 Sound OFF'); });
+            let toastTimeout; function showToast(msg){ clearTimeout(toastTimeout); toast.textContent=msg; toast.classList.add('show'); toastTimeout=setTimeout(()=>toast.classList.remove('show'),1800); }
+            document.addEventListener('keydown',e=>{ if(e.code==='KeyM'&&document.activeElement===document.body){ soundEnabled=!soundEnabled; iconSound.className=soundEnabled?'fa-solid fa-volume-high':'fa-solid fa-volume-xmark'; showToast(soundEnabled?'🔊 Sound ON':'🔇 Sound OFF'); } if(e.code==='KeyR'&&document.activeElement===document.body)resetGame(); if(e.code==='ArrowLeft'){ prevSlide(); resetCarouselInterval(); } if(e.code==='ArrowRight'){ nextSlide(); resetCarouselInterval(); } });
+
+            function init(){ resizeCanvas(); initParticles(); animateParticles(); smoothMouse(); initGame(); setTimeout(()=>showToast('⭐ Tap stars or the button to unlock 62% off!'),1500); }
+            let resizeDebounce; window.addEventListener('resize',()=>{ clearTimeout(resizeDebounce); resizeDebounce=setTimeout(()=>{ resizeCanvas(); initParticles(); if(!rewardUnlocked){ gameArea.querySelectorAll('.star-target,.star-collected-effect').forEach(e=>e.remove()); createStarTargets(); } },250); });
+            document.addEventListener('visibilitychange',()=>{ if(document.hidden){ if(animationId){cancelAnimationFrame(animationId); animationId=null;} if(starAnimationId){cancelAnimationFrame(starAnimationId); starAnimationId=null;} clearInterval(carouselInterval); } else { if(!animationId)animateParticles(); if(!starAnimationId&&!rewardUnlocked)starAnimationId=requestAnimationFrame(animateStars); carouselInterval=setInterval(nextSlide,carouselDelay); } });
+            init();
+        })();
+    </script>
+</body>
+</html>
